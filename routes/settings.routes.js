@@ -4,6 +4,6 @@ const router = new Router();
 
 router.get('/settings/:id', settingsController.getOneSettings);
 router.put('/settings/:id', settingsController.updateSettings);
-//router.post('/settings', settingsController.createSettings);
+router.post('/settings', settingsController.createSettings);
 
 module.exports = router
