@@ -7,7 +7,7 @@ const authRouter = require('./routes/auth.routes');
 
 const app = express();
 const corsOption = {
-    origin:'https://snapx-sifonyarya.vercel.app', 
+    origin:'', 
     credentials:true, 
 }
 app.use(cors(corsOption));
