@@ -9,7 +9,7 @@ const genderRouter = require('./routes/gender.routes');
 
 const app = express();
 const corsOption = {
-    origin:'https://snapx-sifonyarya.vercel.app', 
+    origin:'https://snapx.ru', 
     credentials:true, 
 }
 app.use(cors(corsOption));
