@@ -8,6 +8,7 @@ const roleRouter = require('./routes/role.routes');
 const genderRouter = require('./routes/gender.routes');
 const category_realtyRouter = require('./routes/category_realty.routes');
 const property_realtyRouter = require('./routes/property_realty.routes');
+const rooms_realtyRouter = require('./routes/rooms_realty.routes');
 
 const app = express();
 const corsOption = {
@@ -25,5 +26,6 @@ app.use('/api', settingsRouter)
 app.use('/api/auth', authRouter)
 app.use('/api', category_realtyRouter)
 app.use('/api', property_realtyRouter)
+app.use('/api', rooms_realtyRouter)
 
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`))
