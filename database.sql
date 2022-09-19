@@ -26,3 +26,15 @@ CREATE TABLE settings (
     id SERIAL PRIMARY KEY,
     site_name VARCHAR(255)
 );
+CREATE TABLE category_realty (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR (255)
+);
+CREATE TABLE property_realty (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR (255)
+);
+CREATE TABLE rooms_realty (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR (255)
+);
