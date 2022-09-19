@@ -1,5 +1,5 @@
 const Router = require('express');
-const rooms_realtyContainer = require('../controllers/rooms.controller');
+const rooms_realtyContainer = require('../controllers/rooms_realty.controller');
 const router = new Router();
 
 
