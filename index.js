@@ -7,6 +7,9 @@ const authRouter = require('./routes/auth.routes');
 const roleRouter = require('./routes/role.routes');
 const genderRouter = require('./routes/gender.routes');
 const realtyRouter = require('./routes/realty.routes');
+const usersRouter = require('./routes/users.routes');
+
+
 
 const app = express();
 const corsOption = {
@@ -23,5 +26,6 @@ app.use('/api', genderRouter)
 app.use('/api', settingsRouter)
 app.use('/api/auth', authRouter)
 app.use('/api', realtyRouter)
+app.use('/api', usersRouter)
 
 app.listen(PORT, () => console.log(`Сервер запущен на порту ${PORT}`))

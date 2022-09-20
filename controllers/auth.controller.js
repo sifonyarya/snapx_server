@@ -68,12 +68,5 @@ class AuthController {
             res.status(401).json({error: error.message});
           }
     }
-    async AuthUsers(req, res, next) {
-        try {
-            
-        } catch (error) {
-            
-        }
-    }
 }
 module.exports = new AuthController();
