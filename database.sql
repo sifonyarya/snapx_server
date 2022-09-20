@@ -26,15 +26,20 @@ CREATE TABLE settings (
     id SERIAL PRIMARY KEY,
     site_name VARCHAR(255)
 );
-CREATE TABLE category_realty (
+CREATE TABLE realty (
     id SERIAL PRIMARY KEY,
-    name VARCHAR (255)
-);
-CREATE TABLE property_realty (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR (255)
-);
-CREATE TABLE rooms_realty (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR (255)
+    adress VARCHAR(255),
+    number_realty VARCHAR(255),
+    status_user VARCHAR(255),
+    email VARCHAR(255),
+    name_company VARCHAR(255),
+    username VARCHAR (255),
+    phone VARCHAR(255),
+    online VARCHAR(255),
+    type_realty VARCHAR(255),
+    floor VARCHAR(255),
+    rooms VARCHAR(255),
+    description VARCHAR(255),
+    price VARCHAR(255),
+    status VARCHAR(255)
 );
