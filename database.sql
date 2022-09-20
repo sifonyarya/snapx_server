@@ -28,6 +28,7 @@ CREATE TABLE settings (
 );
 CREATE TABLE realty (
     id SERIAL PRIMARY KEY,
+    type VARCHAR(255),
     adress VARCHAR(255),
     number_realty VARCHAR(255),
     status_user VARCHAR(255),
