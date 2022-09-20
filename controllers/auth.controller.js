@@ -30,8 +30,6 @@ class AuthController {
             const hashedPassword = await bycrypt.hash(req.body.user_password,10);
             const Role = "1";
             const Gender = "2";
-            const users = await pool.query('SELECT * FROM users WHERE email = $1',[user_email]);
-            if(!users.rows.length === 0) return res.status(401).json({error: "Email не найден"});
             const newUser = await pool.query (
                 'INSERT INTO users (email, role_id, gender_id, password) VALUES ($1, $2, $3, $4) RETURNING *',
                 [req.body.user_email, Role, Gender, hashedPassword]);
