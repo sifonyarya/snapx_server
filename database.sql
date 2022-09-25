@@ -9,16 +9,11 @@ CREATE TABLE users (
     phone VARCHAR (255),
     role_id INTEGER,
     FOREIGN KEY (role_id) REFERENCES role (id),
-    gender_id INTEGER,
-    FOREIGN KEY (gender_id) REFERENCES gender (id),
+    gender_id VARCHAR (255),
     password VARCHAR (255),
     timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE role (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
-);
-CREATE TABLE gender (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );
