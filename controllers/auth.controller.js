@@ -28,7 +28,7 @@ class AuthController {
     async AuthRegister(req, res, next) {
         try {
             const hashedPassword = await bycrypt.hash(req.body.user_password,10);
-            const Role = "1";
+            const Role = "3";
             const Gender = "2";
             const newUser = await pool.query (
                 'INSERT INTO users (email, role_id, gender_id, password) VALUES ($1, $2, $3, $4) RETURNING *',
