@@ -38,6 +38,7 @@ class AuthController {
             res.status(500).json({error: error.message });
         }
     }
+    
     async AuthLogout(req, res, next) {
         try {
             res.clearCookie('refresh_token');
