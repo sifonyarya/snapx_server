@@ -28,8 +28,8 @@ class AuthController {
     async AuthRegister(req, res, next) {
         try {
             const hashedPassword = await bycrypt.hash(req.body.user_password,10);
-            const Role = "3";
-            const Gender = "2";
+            const Role = 3;
+            const Gender = 2;
             const newUser = await pool.query (
                 'INSERT INTO users (email, role_id, gender_id, password) VALUES ($1, $2, $3, $4) RETURNING *',
                 [req.body.user_email, Role, Gender, hashedPassword]);
@@ -38,7 +38,7 @@ class AuthController {
             res.status(500).json({error: error.message });
         }
     }
-    
+
     async AuthLogout(req, res, next) {
         try {
             res.clearCookie('refresh_token');
